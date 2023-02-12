@@ -1,5 +1,19 @@
 {
     "rewrites":  [
       {"source": "/(.*)", "destination": "/"}
+    ],
+    "headers": [
+        {
+          "source": "/(.*)",
+          "headers": [
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        },
+        {
+          "source": "/vercel-deploy-rosy-beta.vercel.app/(.*)",
+          "headers": [
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        }  
     ]
   }
